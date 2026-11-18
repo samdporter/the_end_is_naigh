@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The End is N-AI-gh: Amodei is Coming, Look Busy</title>
+  <meta name="description" content="Clinical Scientific Computing presentation on AI coding harnesses, domain context, and why humans still matter (for now)." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Presentation Styles & Controller -->
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="deck-shell" id="deck">
+    <!-- Top Header Bar -->
+    <header class="topbar" aria-label="Presentation Header">
+      <div class="topbar-left">
+        <span class="slide-counter" id="slide-counter">01 / 09</span>
+        <span class="deck-kicker">CLINICAL SCIENTIFIC COMPUTING // POST-HANDCRAFTING ERA</span>
+      </div>
+
+      <div class="rapture-ticker" id="rapture-ticker" title="Estimated arrival of silicon omniscience">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span>AMODEI PROXIMITY: UNCOMFORTABLY CLOSE</span>
+      </div>
+
+      <nav class="nav-dots" id="nav-dots" aria-label="Slide navigation">
+        <button type="button" class="nav-dot active" data-slide-target="0" aria-label="Go to Slide 1: Title" title="1. The End is N-AI-gh"></button>
+        <button type="button" class="nav-dot" data-slide-target="1" aria-label="Go to Slide 2: Dino Tycoon" title="2. Exhibit A: Dino Tycoon"></button>
+        <button type="button" class="nav-dot" data-slide-target="2" aria-label="Go to Slide 3: AutoSeg" title="3. Exhibit B: AutoSeg"></button>
+        <button type="button" class="nav-dot" data-slide-target="3" aria-label="Go to Slide 4: PhD Unified" title="4. Exhibit C: PhD in 48h"></button>
+        <button type="button" class="nav-dot" data-slide-target="4" aria-label="Go to Slide 5: Context Superpower" title="5. Context is the Superpower"></button>
+        <button type="button" class="nav-dot" data-slide-target="5" aria-label="Go to Slide 6: STRS Case Study" title="6. Clinical Case Study: STRS"></button>
+        <button type="button" class="nav-dot" data-slide-target="6" aria-label="Go to Slide 7: The New Compact" title="7. The New Compact"></button>
+        <button type="button" class="nav-dot" data-slide-target="7" aria-label="Go to Slide 8: Where Humans Win" title="8. Where Humans Win"></button>
+        <button type="button" class="nav-dot" data-slide-target="8" aria-label="Go to Slide 9: Meta Reveal & Audit" title="9. Exhibit D & Audit"></button>
+      </nav>
+
+      <div class="deck-progress" id="deck-progress" style="width: 11.11%;" aria-hidden="true"></div>
+    </header>
+
+    <!-- Main Slide Viewport -->
+    <main class="slides-viewport" id="slides-container" aria-live="polite">
+
+      <!-- ===================================================================
+           SLIDE 1: TITLE — THE END IS N-AI-GH
+           =================================================================== -->
+      <section
+        class="slide active"
+        data-slide-index="0"
+        data-title="The End is N-AI-gh"
+        data-notes="Start gently. Acknowledge the elephant in the server room: Dario Amodei keeps promising software engineering is basically done, and whilst we usually roll our eyes at Silicon Valley hyperbole, three recent weekend experiments—plus looking at a real 40k-line clinical app—suggest it's time we quietly updated our working habits before the NHS IT procurement cycle finishes."
+      >
+        <div class="slide-inner hero-slide">
+          <div class="prophetic-seal">
+            <span>CLINICAL SCIENTIFIC COMPUTING // POST-HANDCRAFTING ERA</span>
+          </div>
+
+          <h1>The End is N-AI-gh</h1>
+          <p class="lead" style="margin: 0 auto; font-size: clamp(1.15rem, 1.8vw, 1.5rem); color: var(--text);">
+            <em>Amodei is Coming. Look Busy.</em>
+          </p>
+
+          <div class="scroll-divider" aria-hidden="true">✦ ✧ ✦</div>
+
+          <blockquote class="quote-scroll" style="max-width: 74ch; margin: 0 auto; text-align: left;">
+            “We still hand-write code, hand-review 40,000-line PRs, and type out documentation like medieval monks illuminating a manuscript. Meanwhile, the silicon rapture has quietly arrived.”
+          </blockquote>
+
+          <div class="grid-3" style="text-align: left; margin-top: 0.35rem;">
+            <article class="card card-gold">
+              <div class="card-header">
+                <span class="eyebrow">01 // ACCEPT IT</span>
+                <span class="badge badge-gold">Ego Check</span>
+              </div>
+              <p class="muted" style="margin: 0; font-size: 0.92rem; color: var(--text-soft);">
+                AI is now better at pure code, maths, and boilerplate architecture than we are.
+              </p>
+            </article>
+
+            <article class="card card-crimson">
+              <div class="card-header">
+                <span class="eyebrow crimson">02 // STOP FIGHTING IT</span>
+                <span class="badge badge-crimson">Slop Myth</span>
+              </div>
+              <p class="muted" style="margin: 0; font-size: 0.92rem; color: var(--text-soft);">
+                Worrying about ‘AI slop’ while refusing to build proper harnesses is missing the point.
+              </p>
+            </article>
+
+            <article class="card card-emerald">
+              <div class="card-header">
+                <span class="eyebrow emerald">03 // MOVE ON TO WHERE WE WIN</span>
+                <span class="badge badge-emerald">Our Turf</span>
+              </div>
+              <p class="muted" style="margin: 0; font-size: 0.92rem; color: var(--text-soft);">
+                Clinical context, hospital systems, foibles, clinicians, and rigorous test harnesses.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 2: EXHIBIT A (WEEKEND #1) — DINO TYCOON
+           =================================================================== -->
+      <section
+        class="slide next"
+        data-slide-index="1"
+        data-title="Exhibit A: Dino Tycoon"
+        data-notes="First weekend experiment: I am categorically not a game developer. I don't know Three.js shaders or state-machine pathfinding from memory. Yet over one weekend, the agents built three distinct eras of a full 3D park tycoon—AND built their own headless simulation harness, 60-day soak tester, 4 autonomous Masterclass bots, and 32 Playwright checks across Chromium & WebKit. Click the tabs to watch the simulated street-map swarm evolve."
+      >
+        <div class="slide-inner align-top">
+          <div class="slide-header">
+            <span class="eyebrow cyan">EXHIBIT A // WEEKEND #1 // AUTONOMOUS BUILD + TEST LOOP</span>
+            <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.75rem;">
+              <h2>Dino Tycoon &amp; The Multi-Agent Testing Swarm</h2>
+              <div class="pill-row">
+                <span class="stat-pill cyan"><strong>32</strong> Playwright checks</span>
+                <span class="stat-pill gold"><strong>60-day</strong> headless soak</span>
+                <span class="stat-pill emerald"><strong>4</strong> bot strategies</span>
+              </div>
+            </div>
+            <p class="subtitle">
+              “I vibe-coded a full 3D browser game in a weekend. Not because I'm a game dev — I'm very much not — but to see what happens when you let agents build <strong>AND</strong> test in a loop.”
+            </p>
+          </div>
+
+          <div class="tabs-container" data-tab-group="dino-era">
+            <div class="tab-bar" role="tablist" aria-label="Dino Tycoon development eras">
+              <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="era1" data-dino-era="era1">
+                Era 1: Wild Acres Zoo
+              </button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="era2" data-dino-era="era2">
+                Era 2: Dino Tycoon
+              </button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="era3" data-dino-era="era3">
+                Era 3: Monorail, Sea &amp; Sky
+              </button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="swarm" data-dino-era="swarm">
+                Agent Swarm Testing
+              </button>
+            </div>
+
+            <div class="grid-asymmetric">
+              <!-- Live Street-Map Canvas Simulation -->
+              <div class="dino-sim-box">
+                <div class="dino-sim-toolbar">
+                  <div class="pill-row">
+                    <span class="badge badge-cyan" id="dino-era-badge">ERA 1 // WILD ACRES ZOO</span>
+                    <span class="mono muted" id="dino-sim-status" style="font-size: 0.75rem;">Street-map agent loop active</span>
+                  </div>
+                  <div class="pill-row">
+                    <button type="button" class="btn" id="dino-sim-toggle" style="padding: 0.28rem 0.65rem; font-size: 0.76rem;">Pause Sim</button>
+                    <a
+                      href="https://samdporter.github.io/Dino-Tycoon/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn btn-cyan"
+                      style="padding: 0.28rem 0.7rem; font-size: 0.76rem;"
+                    >
+                      Launch Live Game ↗
+                    </a>
+                  </div>
+                </div>
+
+                <div class="dino-sim-canvas-wrap">
+                  <canvas id="dino-agent-canvas" aria-label="Automated street map simulation of Dino Tycoon agents"></canvas>
+                  <div class="sim-hud" id="dino-sim-hud">
+                    <span class="stat-pill emerald">AGENTS: <strong id="hud-agents">1</strong></span>
+                    <span class="stat-pill gold">DAY: <strong id="hud-day">14</strong></span>
+                    <span class="stat-pill cyan">CASH: <strong id="hud-cash">£42,800</strong></span>
+                    <span class="stat-pill">CHECKS: <strong id="hud-checks">PASS</strong></span>
+                  </div>
+                </div>
+
+                <div class="tab-panels">
+                  <div class="tab-panel active" data-tab-panel="era1">
+                    <p class="muted" style="margin: 0; font-size: 0.88rem; color: var(--text-soft);">
+                      <strong class="text-gold">Era 1 — Wild Acres Zoo:</strong> Humble beginnings: basic fenced enclosures, footpaths, kiosks, and wandering guests discovering pathfinding edges.
+                    </p>
+                  </div>
+                  <div class="tab-panel" data-tab-panel="era2">
+                    <p class="muted" style="margin: 0; font-size: 0.88rem; color: var(--text-soft);">
+                      <strong class="text-gold">Era 2 — Dino Tycoon:</strong> 3D dinosaur portraits, DNA sequencing lab, 6 interactive splice puzzles, and island power-grid outages when generators overload.
+                    </p>
+                  </div>
+                  <div class="tab-panel" data-tab-panel="era3">
+                    <p class="muted" style="margin: 0; font-size: 0.88rem; color: var(--text-soft);">
+                      <strong class="text-gold">Era 3 — Monorail, Sea &amp; Sky:</strong> Elevated monorail with ride-along camera, marine lagoon tanks, pterosaur aviaries, containment moats, and safari trucks.
+                    </p>
+                  </div>
+                  <div class="tab-panel" data-tab-panel="swarm">
+                    <p class="muted" style="margin: 0; font-size: 0.88rem; color: var(--text-soft);">
+                      <strong class="text-emerald">Agent Swarm Testing:</strong> Parallel agents running <code>simtest.js</code> headless scenarios, <code>soak.js</code> 60-day economy simulations, 4 automated Masterclass strategies on the street map, and 32 Playwright checks across Chromium &amp; WebKit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Dropzone + Live Launch -->
+              <div style="display: flex; flex-direction: column; gap: 0.9rem;">
+                <div class="video-dropzone" id="dino-video-dropzone" tabindex="0" role="button" aria-label="Drop or click to load gameplay MP4 clip">
+                  <input type="file" id="dino-video-input" accept="video/mp4,video/webm,video/*" hidden />
+                  <span class="badge badge-gold">OPTIONAL GAMEPLAY CLIP</span>
+                  <strong style="font-size: 0.95rem; color: var(--text);">Drop <code>.mp4</code> gameplay recording here</strong>
+                  <span class="muted" style="font-size: 0.82rem; max-width: 30ch;">
+                    Drag a local screen recording onto this panel (or click to browse) for live playback mid-talk.
+                  </span>
+                  <video id="dino-video-player" controls playsinline hidden></video>
+                </div>
+
+                <div class="card">
+                  <div class="card-header">
+                    <span class="eyebrow">WHY IT MATTERS</span>
+                    <span class="badge">Zero Game-Dev Pedigree</span>
+                  </div>
+                  <ul class="clean-list" style="font-size: 0.87rem;">
+                    <li><strong>Agents wrote the tests first:</strong> headless <code>simtest.js</code> caught bankruptcies &amp; guest path traps before a browser ever opened.</li>
+                    <li><strong>60-day <code>soak.js</code></strong> found slow memory &amp; economy drift impossible to spot in a 2-minute manual playtest.</li>
+                    <li><strong>32 Playwright checks</strong> verified WebGL, WebKit, and UI controls automatically after every edit.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 3: EXHIBIT B (WEEKEND #2) — AUTOSEG VS NNU-NET V2
+           =================================================================== -->
+      <section
+        class="slide next"
+        data-slide-index="2"
+        data-title="Exhibit B: AutoSeg vs nnU-Net v2"
+        data-notes="Weekend #2 hit closer to home: medical image segmentation. Anyone who's worked with meld_find knows how painful it is trying to separate nnU-Net's genuinely brilliant self-configuring heuristics from its rigid CLI, hardcoded environment variables, and folder structure. Over one weekend, an agent built AutoSeg—clean PyTorch Lightning + MONAI with zero nnunetv2 runtime dependency and 548 equivalence tests. Best part: when patch sampling differed slightly, the agent traced it to an unreported off-by-one clamping bug in upstream nnUNetDataLoader.get_bbox. Toggle the switch to see the exact bug."
+      >
+        <div class="slide-inner align-top">
+          <div class="slide-header">
+            <span class="eyebrow emerald">EXHIBIT B // WEEKEND #2 // PYTORCH LIGHTNING + MONAI</span>
+            <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.75rem;">
+              <h2>AutoSeg vs MELD Find &amp; nnU-Net v2</h2>
+              <div class="pill-row">
+                <span class="stat-pill emerald"><strong>0</strong> nnunetv2 runtime deps</span>
+                <span class="stat-pill cyan"><strong>548</strong> equivalence tests</span>
+                <span class="stat-pill crimson"><strong>1</strong> upstream bug found</span>
+              </div>
+            </div>
+            <p class="subtitle">
+              Decoupling <code>nnU-Net</code>'s self-configuring magic from its rigid CLI, hardcoded env vars, and folder conventions (as anyone who's wrestled with <code>meld_find</code> knows — with complete respect to the MELD team!).
+            </p>
+          </div>
+
+          <div class="grid-asymmetric">
+            <!-- Benchmark Plot Switcher -->
+            <div class="card">
+              <div class="tabs-container" data-tab-group="autoseg-plots">
+                <div class="tab-bar" role="tablist" aria-label="AutoSeg benchmark datasets">
+                  <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="all">All Datasets</button>
+                  <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="hippocampus">Hippocampus</button>
+                  <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="heart">HeartSmall</button>
+                  <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="multiorgan">MultiOrganSmall</button>
+                </div>
+
+                <div class="tab-panels">
+                  <div class="tab-panel active" data-tab-panel="all">
+                    <figure class="figure-frame" style="margin: 0;">
+                      <img
+                        src="assets/autoseg/curves_all_datasets_3folds_50epochs.png"
+                        alt="3-fold 50-epoch training curves comparing nnU-Net v2 and AutoSeg across all benchmark datasets"
+                        class="zoomable"
+                      />
+                      <figcaption class="figure-caption">
+                        <span>3-fold, 50-epoch parity across all datasets — clean PyTorch Lightning + MONAI</span>
+                        <span class="zoom-hint">Click to zoom</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="tab-panel" data-tab-panel="hippocampus">
+                    <figure class="figure-frame" style="margin: 0;">
+                      <img
+                        src="assets/autoseg/curves_Dataset004_Hippocampus_3folds_50epochs.png"
+                        alt="Hippocampus segmentation Dice curves: nnU-Net 0.8898 vs AutoSeg PlainConv 0.8893 vs AutoSeg MELD DynUNet 0.8924"
+                        class="zoomable"
+                      />
+                      <figcaption class="figure-caption">
+                        <span>Hippocampus Dice: <code>0.8898</code> nnU-Net · <code>0.8893</code> AutoSeg PlainConv · <strong class="text-emerald"><code>0.8924</code> MELD DynUNet</strong></span>
+                        <span class="zoom-hint">Click to zoom</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="tab-panel" data-tab-panel="heart">
+                    <figure class="figure-frame" style="margin: 0;">
+                      <img
+                        src="assets/autoseg/curves_Dataset010_HeartSmall_3folds_50epochs.png"
+                        alt="HeartSmall segmentation Dice curves: nnU-Net 0.8701 vs AutoSeg MELD DynUNet 0.8793"
+                        class="zoomable"
+                      />
+                      <figcaption class="figure-caption">
+                        <span>HeartSmall Dice: <code>0.8701</code> nnU-Net vs <strong class="text-emerald"><code>0.8793</code> AutoSeg MELD DynUNet</strong></span>
+                        <span class="zoom-hint">Click to zoom</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="tab-panel" data-tab-panel="multiorgan">
+                    <figure class="figure-frame" style="margin: 0;">
+                      <img
+                        src="assets/autoseg/curves_Dataset011_MultiOrganSmall_3folds_50epochs.png"
+                        alt="MultiOrganSmall segmentation Dice curves: nnU-Net 0.9990 vs AutoSeg MELD DynUNet 0.9993"
+                        class="zoomable"
+                      />
+                      <figcaption class="figure-caption">
+                        <span>MultiOrganSmall Dice: <code>0.9990</code> nnU-Net vs <strong class="text-emerald"><code>0.9993</code> AutoSeg MELD DynUNet</strong></span>
+                        <span class="zoom-hint">Click to zoom</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Bug Reveal Card -->
+            <div class="bug-reveal-card bug-highlighted is-revealed" id="bbox-bug-card">
+              <div class="bug-reveal-header">
+                <div>
+                  <span class="eyebrow crimson">UPSTREAM DISCOVERY</span>
+                  <h3 style="margin-top: 0.2rem;"><code>nnUNetDataLoader.get_bbox</code> Bug</h3>
+                </div>
+
+                <label class="bug-toggle" for="toggle-bbox-bug">
+                  <span><code>reproduce_upstream_bbox_bug</code></span>
+                  <span class="toggle-switch">
+                    <input type="checkbox" id="toggle-bbox-bug" checked />
+                    <span class="toggle-slider"></span>
+                  </span>
+                  <span class="badge badge-crimson" id="bbox-flag-state">True</span>
+                </label>
+              </div>
+
+              <p class="muted" style="margin: 0; font-size: 0.87rem; color: var(--text-soft);">
+                Wait — why wasn't patch sampling matching at first? The AI traced a tiny discrepancy to an <strong>unreported bug in upstream nnU-Net v2</strong>: foreground-centred crops near the volume edge forget to clamp the upper bound, spilling past <code>ubs</code> with extra zero-padding.
+              </p>
+
+              <div class="code-diff-grid">
+                <div class="code-pane">
+                  <div class="code-pane-title">
+                    <span>upstream nnunetv2</span>
+                    <span class="text-crimson">unclamped</span>
+                  </div>
+                  <pre><code><span class="code-line">lbs = [max(lbs[d], min_lbs[d]) for d in dims]</span>
+<span class="code-line is-bug"># Bug: ubs upper bound never clamped to ubs!</span>
+<span class="code-line is-bug">bbox_lbs = [np.random.randint(lbs[d], ubs[d] + 1)]</span>
+<span class="code-line is-bug">bbox_ubs = [bbox_lbs[d] + patch_size[d]]</span></code></pre>
+                </div>
+
+                <div class="code-pane">
+                  <div class="code-pane-title">
+                    <span>autoseg parity flag</span>
+                    <span class="text-emerald">selectable</span>
+                  </div>
+                  <pre><code><span class="code-line">if not reproduce_upstream_bbox_bug:</span>
+<span class="code-line is-fix">  bbox_lbs[d] = min(bbox_lbs[d], max_lbs[d])</span>
+<span class="code-line is-fix">  bbox_ubs[d] = min(bbox_ubs[d], vol_shape[d])</span>
+<span class="code-line">  # Cleanly avoids asymmetric zero-pad</span></code></pre>
+                </div>
+              </div>
+
+              <div class="bug-callout" id="bbox-callout">
+                <strong><code>reproduce_upstream_bbox_bug=True</code>:</strong> Deliberately reproducing upstream's unclamped edge-crop overflow so our 548 equivalence tests prove exact numerical parity down to the voxel.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 4: EXHIBIT C (WEEKEND #3) — ENTIRE PHD UNIFIED IN 48H
+           =================================================================== -->
+      <section
+        class="slide next"
+        data-slide-index="3"
+        data-title="Exhibit C: PhD in 48 Hours"
+        data-notes="Weekend #3 is the one that slightly gave me an existential crisis. My PhD work: 2Hop-Tsai-dTNV for dual-modality PET/SPECT reconstruction. In 48 hours, with a rigorous verification harness, we swept 14 comparator families across Track A and Track B, built an exact monotonic FISTA-DP solver accounting for the non-commuting spatial-sensitivity operator, and dropped false-lesion hallucinations from 14.05% down to 3.89%. This isn't a boast—it's mildly terrifying how little my own typing mattered once 4 years of context were written down."
+      >
+        <div class="slide-inner align-top">
+          <div class="slide-header">
+            <span class="eyebrow gold">EXHIBIT C // WEEKEND #3 // 2HOP-TSAI-DTNV</span>
+            <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.75rem;">
+              <h2>My Entire PhD Unified in 48 Hours</h2>
+              <div class="pill-row">
+                <span class="stat-pill gold"><strong>14</strong> comparator families</span>
+                <span class="stat-pill cyan"><strong>0.84%</strong> error in 45 iters (6.7s)</span>
+                <span class="stat-pill emerald"><strong>3.89%</strong> hallucination (down from 14.05%)</span>
+              </div>
+            </div>
+            <p class="subtitle">
+              Multi-Hop Directional Spatial-Sensitivity Total Nuclear Variation (<code>2Hop-Tsai-dTNV</code>) across Track A (<sup>18</sup>F-FDG PET + DaTscan SPECT) &amp; Track B (<sup>90</sup>Y Glioblastoma PET + Bremsstrahlung SPECT).
+            </p>
+          </div>
+
+          <div class="grid-asymmetric">
+            <!-- Interactive Figure Switcher -->
+            <div class="card">
+              <div class="tabs-container" data-tab-group="phd-figs">
+                <div class="tab-bar" role="tablist" aria-label="PhD reconstruction figures">
+                  <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="recons">Dual-Track Recons</button>
+                  <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="hallucinations">Hallucination Maps</button>
+                  <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="convergence">Solver Convergence</button>
+                  <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="forest">Cohort Forest Plot</button>
+                </div>
+
+                <div class="tab-panels">
+                  <div class="tab-panel active" data-tab-panel="recons">
+                    <figure class="figure-frame" style="margin: 0;">
+                      <img
+                        src="assets/phd/fig2_reconstruction_galleries_track_a_b.png"
+                        alt="Dual-track reconstruction gallery for Track A FDG/DaTscan and Track B Y-90 Glioblastoma PET/SPECT"
+                        class="zoomable"
+                      />
+                      <figcaption class="figure-caption">
+                        <span>Track A (<sup>18</sup>F-FDG + DaTscan) &amp; Track B (<sup>90</sup>Y PET + Bremsstrahlung SPECT) galleries</span>
+                        <span class="zoom-hint">Click to zoom</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="tab-panel" data-tab-panel="hallucinations">
+                    <figure class="figure-frame" style="margin: 0;">
+                      <img
+                        src="assets/phd/fig7_hallucination_difference_maps.png"
+                        alt="Anatomical hallucination difference maps showing reduction from 14.05 percent to 3.89 percent"
+                        class="zoomable"
+                      />
+                      <figcaption class="figure-caption">
+                        <span>False-lesion hallucination cut: <code>14.05%</code> (2x-HKEM) &amp; <code>12.31%</code> (2x-dTV) → <strong class="text-emerald"><code>3.89%</code></strong></span>
+                        <span class="zoom-hint">Click to zoom</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="tab-panel" data-tab-panel="convergence">
+                    <figure class="figure-frame" style="margin: 0;">
+                      <img
+                        src="assets/phd/fig4_solver_convergence_benchmark.png"
+                        alt="Solver convergence benchmark comparing monotonic FISTA-DP against PDHG"
+                        class="zoomable"
+                      />
+                      <figcaption class="figure-caption">
+                        <span><code>FISTA-DP</code> vs <code>PDHG</code>: <code>0.84%</code> error in 45 iters (<code>6.7s</code>), 0 monotonicity violations</span>
+                        <span class="zoom-hint">Click to zoom</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+
+                  <div class="tab-panel" data-tab-panel="forest">
+                    <figure class="figure-frame" style="margin: 0;">
+                      <img
+                        src="assets/phd/fig5_heldout_n12_forest_and_factor_isolation.png"
+                        alt="Held-out cohort n=12 forest plot and factor isolation results"
+                        class="zoomable"
+                      />
+                      <figcaption class="figure-caption">
+                        <span>Held-out cohort (n=12) forest plot &amp; ablation factor isolation</span>
+                        <span class="zoom-hint">Click to zoom</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Punchline & Technical Highlights -->
+            <div style="display: flex; flex-direction: column; gap: 0.9rem;">
+              <div class="card card-gold">
+                <span class="eyebrow">THE CRUCIAL PUNCHLINE</span>
+                <p style="margin: 0; font-size: 1.06rem; font-weight: 700; color: var(--text);">
+                  “Why did it work in a weekend? Because I fed it <span class="text-gold">4 years of hard-won human context</span>.”
+                </p>
+                <p class="muted" style="margin: 0; font-size: 0.87rem; font-style: italic;">
+                  This isn't a boast — if anything, it's mildly terrifying how little my own coding ability mattered once the context and harness were right.
+                </p>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <span class="eyebrow cyan">NUMERICAL RECEIPTS</span>
+                  <span class="badge badge-cyan">FISTA-DP</span>
+                </div>
+                <ul class="clean-list" style="font-size: 0.87rem;">
+                  <li><strong>Non-commuting operators:</strong> Exact monotonic <code>FISTA-DP</code> solver accounts for <code>[diag(&kappa;<sub>m</sub><sup>2</sup>), D<sub>d</sub>] &ne; 0</code>.</li>
+                  <li><strong>Convergence:</strong> Reaches <code>0.84%</code> relative error in <code>45 iterations</code> (<code>6.7s</code>), with <code>0</code> monotonicity violations.</li>
+                  <li><strong>Clinical payoff:</strong> Anatomical false-lesion hallucination drops from <code>14.05%</code> (<code>2x-HKEM</code>) &amp; <code>12.31%</code> (<code>2x-dTV</code>) to <strong class="text-emerald"><code>3.89%</code></strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 5: THE SECRET INGREDIENT — CONTEXT IS THE SUPERPOWER
+           =================================================================== -->
+      <section
+        class="slide next"
+        data-slide-index="4"
+        data-title="Context is the Superpower"
+        data-notes="This explains the stark divide people experience with LLMs. If you type 'make me a PET reconstruction pipeline' into a chat box, you get AI Slop—plausible syntax, subtle sign errors, fake physics. If you feed it 4 years of domain invariants, failure modes, and a strict verification harness, the exact same model behaves like a tireless research engineer."
+      >
+        <div class="slide-inner align-top">
+          <div class="slide-header">
+            <span class="eyebrow">THE DIAGNOSIS // WHY SOME PEOPLE ONLY SEE SLOP</span>
+            <h2>The Secret Ingredient: Context is the Superpower (Not ‘Prompting’)</h2>
+            <p class="subtitle">
+              “AI slop” isn't an inherent law of physics — it's what happens when you give a bright, amnesiac intern zero domain specification and no unit tests.
+            </p>
+          </div>
+
+          <div class="vs-grid">
+            <article class="vs-card old-religion">
+              <div class="card-header">
+                <span class="eyebrow crimson">THE LAZY PROMPT</span>
+                <span class="badge badge-crimson">Produces AI Slop</span>
+              </div>
+              <pre><code>"Make me a dual-modality PET/SPECT reconstruction pipeline in PyTorch."</code></pre>
+              <ul class="clean-list">
+                <li><strong>No physical invariants:</strong> Silently drops sensitivity normalisation or breaks adjointness.</li>
+                <li><strong>Hallucinated metrics:</strong> Looks tidy in a notebook; quietly invents lesions on patient scans.</li>
+                <li><strong>Zero harness:</strong> Leaves a human squinting at 600 lines of unfamiliar numpy broadcasting.</li>
+              </ul>
+            </article>
+
+            <div class="vs-divider" aria-hidden="true">
+              <span class="vs-badge">VS</span>
+            </div>
+
+            <article class="vs-card post-rapture">
+              <div class="card-header">
+                <span class="eyebrow emerald">CURATED DOMAIN CONTEXT + HARNESS</span>
+                <span class="badge badge-emerald">Engineering Engine</span>
+              </div>
+              <pre><code>AGENTS.md + 4 yrs physics notes + adjoint tests + 14 comparator baselines</code></pre>
+              <ul class="clean-list">
+                <li><strong>Explicit failure modes:</strong> Knows why count-starved <sup>90</sup>Y SPECT breaks naïve joint priors.</li>
+                <li><strong>Automated falsification:</strong> Every candidate change runs against held-out phantoms &amp; monotonicity checks.</li>
+                <li><strong>Relentless iteration:</strong> Explores 14 comparator families while you make a cup of tea.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="card card-gold" style="text-align: center; padding: 1rem 1.25rem;">
+            <span class="eyebrow" style="justify-content: center;">THE VELOCITY EQUATION</span>
+            <p class="mono" style="margin: 0; font-size: clamp(0.92rem, 1.35vw, 1.15rem); font-weight: 600; color: var(--text);">
+              <span class="text-cyan">Deep Domain Context</span>
+              <span class="muted"> + </span>
+              <span class="text-emerald">Automated Verification Harness</span>
+              <span class="muted"> = </span>
+              <span class="text-gold">Superhuman Velocity</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 6: REAL CLINICAL CASE STUDY — GEOFF BURNHILL'S STRS APP
+           =================================================================== -->
+      <section
+        class="slide next"
+        data-slide-index="5"
+        data-title="Clinical Case Study: STRS"
+        data-notes="Now let's bring this straight into our NHS day job. Geoff Burnhill built a remarkable >40,000-line C# app for the South Thames Retrieval Service—paediatric emergency drugs and infusions. Under our old mindset, we'd either try to read 40,000 lines of Claude-generated C# line-by-line in a PR (spoiler: humans go snow-blind after line 400), or point at his 396 passing unit tests and declare victory. Instead, we aimed adversarial AI probes at the compiled app. Those probes found 23 real clinical/system bugs (B00-B22) that 396 green unit tests completely missed—including a bedside print-sheet carry-over bug (B09) and infant age truncation (B01). That's the lesson: stop reading 40k lines by eye; supervise AI to build adversarial harnesses and translate Geoff's docs into our QMS templates."
+      >
+        <div class="slide-inner align-top">
+          <div class="slide-header">
+            <span class="eyebrow crimson">CLINICAL CASE STUDY // SOUTH THAMES RETRIEVAL SERVICE</span>
+            <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.75rem;">
+              <h2>Geoff Burnhill’s STRS App (&gt;40,000 Lines of Regulated C#)</h2>
+              <div class="pill-row">
+                <span class="stat-pill emerald"><strong>396</strong> unit tests passing (160 BE + 236 FE)</span>
+                <span class="stat-pill crimson"><strong>23</strong> real defects found (<code>B00</code>–<code>B22</code>)</span>
+              </div>
+            </div>
+            <p class="subtitle">
+              Impressive Class I paediatric emergency drug &amp; infusion software. The old reflex: read 40k lines of C# in a PR (humans go snow-blind after line 400) and ask Geoff to hand-type his docs into our QMS template.
+            </p>
+          </div>
+
+          <div class="tabs-container" data-tab-group="strs-cases">
+            <div class="tab-bar" role="tablist" aria-label="STRS adversarial probe findings">
+              <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-tab="b09">Case 1: Bedside Print Carry-Over (B09)</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="b01">Case 2: Infant Age Truncation (B01)</button>
+              <button type="button" class="tab-btn" role="tab" aria-selected="false" data-tab="b00-b11">Case 3: Cosmos Crash &amp; Blank Submit (B00 / B11)</button>
+            </div>
+
+            <div class="tab-panels">
+              <!-- Case 1: B09 -->
+              <div class="tab-panel active" data-tab-panel="b09">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 style="margin: 0;"><code>B09</code> — Ghost Drugs on the Printed Bedside Sheet</h3>
+                    <span class="badge badge-crimson">Missed by 396 unit tests</span>
+                  </div>
+                  <p class="muted" style="margin: 0; font-size: 0.88rem; color: var(--text-soft);">
+                    Choose <em>Aciclovir</em> for Alice, then click <strong>New Patient</strong> for Bob (or <strong>Remove</strong> for Carol). The UI clears cleanly — but session state retains <code>drug1</code>/<code>drug2</code> on the <strong>printed bedside sheet</strong>!
+                  </p>
+                  <div class="grid-2">
+                    <figure class="figure-frame" style="margin: 0;">
+                      <img
+                        src="assets/strs/extra-drugs-after-new-patient.png"
+                        alt="Screenshot of STRS bedside print sheet retaining previous patient extra drugs after clicking New Patient"
+                        class="zoomable"
+                      />
+                      <figcaption class="figure-caption">
+                        <span>After clicking <em>New Patient</em>: previous <code>drug1</code>/<code>drug2</code> persist</span>
+                        <span class="zoom-hint">Click to zoom</span>
+                      </figcaption>
+                    </figure>
+                    <figure class="figure-frame" style="margin: 0;">
+                      <img
+                        src="assets/strs/extra-drugs-after-remove.png"
+                        alt="Screenshot of STRS bedside print sheet retaining extra drug after clicking Remove"
+                        class="zoomable"
+                      />
+                      <figcaption class="figure-caption">
+                        <span>After clicking <em>Remove</em>: screen looks clean, print state stale</span>
+                        <span class="zoom-hint">Click to zoom</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Case 2: B01 -->
+              <div class="tab-panel" data-tab-panel="b01">
+                <div class="card card-crimson">
+                  <div class="card-header">
+                    <h3 style="margin: 0;"><code>B01</code> — Infant Fractional Age Truncation</h3>
+                    <span class="badge badge-crimson">Neonates &amp; &lt;1 yr affected</span>
+                  </div>
+                  <p class="muted" style="margin: 0; font-size: 0.92rem; color: var(--text-soft);">
+                    Frontend casts decimal years via <code>(int)age</code> before calling the backend dosing engine. Every infant under 12 months silently collapses to <code>age = 0</code>.
+                  </p>
+                  <pre><code>// Frontend boundary silently truncates fractional years:
+int ageYears = (int)patient.AgeInYears; // 0.5 yrs (6 months) -&gt; 0
+var sheet = await api.CalculateDrugs(ageYears, patient.WeightKg);</code></pre>
+                  <p class="muted" style="margin: 0; font-size: 0.85rem;">
+                    Why green unit tests missed it: backend tests passed valid integers directly, whilst frontend component tests mocked the API response. Only an end-to-end adversarial probe hit the seam.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Case 3: B00 & B11 -->
+              <div class="tab-panel" data-tab-panel="b00-b11">
+                <div class="grid-2">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 style="margin: 0;"><code>B00</code> — Azure Cosmos Sync Crash</h3>
+                      <span class="badge badge-crimson">Prod-only failure</span>
+                    </div>
+                    <p class="muted" style="margin: 0; font-size: 0.88rem; color: var(--text-soft);">
+                      Unit tests ran against EF Core <code>InMemory</code>, which happily executes synchronous calls that Azure Cosmos DB rejects at runtime in production.
+                    </p>
+                    <div class="card card-gold" style="padding: 0.75rem 0.9rem; margin-top: auto;">
+                      <span class="eyebrow">THE LESSON FOR OUR TEAM</span>
+                      <p class="muted" style="margin: 0; font-size: 0.84rem; color: var(--text-soft);">
+                        Don't read 40,000 lines by eye. Supervise AI to build <strong>adversarial harnesses</strong> and <strong>auto-convert Geoff's docs into our QMS templates</strong> so we review what actually matters.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 style="margin: 0;"><code>B11</code> — Infusion Blank Submit</h3>
+                      <span class="badge badge-crimson">Validation gap</span>
+                    </div>
+                    <figure class="figure-frame" style="margin: 0;">
+                      <img
+                        src="assets/strs/infusion-blank-submit.png"
+                        alt="Screenshot showing STRS infusion calculator handling blank submission unexpectedly"
+                        class="zoomable"
+                      />
+                      <figcaption class="figure-caption">
+                        <span>Blank infusion form submission caught by headless browser probe</span>
+                        <span class="zoom-hint">Click to zoom</span>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 7: THE NEW COMPACT — STOP READING EVERY LINE
+           =================================================================== -->
+      <section
+        class="slide next"
+        data-slide-index="6"
+        data-title="The New Compact"
+        data-notes="So here is the practical deal for Clinical Scientific Computing. We stop pretending a human scrolling through 40k lines of PR diff is 'quality assurance', and we stop spending three weeks hand-formatting QMS templates. Instead we pour our energy into invariants, adversarial harnesses, and curated context files like AGENTS.md and hazard logs."
+      >
+        <div class="slide-inner align-top">
+          <div class="slide-header">
+            <span class="eyebrow cyan">THE NEW COMPACT // CLINICAL SCIENTIFIC COMPUTING</span>
+            <h2>Stop Reading Every Line. Start Building the Harness.</h2>
+            <p class="subtitle">
+              A modest proposal for how our team works when writing 1,000 lines of code takes thirty seconds.
+            </p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+            <!-- Row 1 -->
+            <div class="vs-grid">
+              <div class="vs-card old-religion" style="padding: 0.9rem 1.1rem;">
+                <span class="eyebrow crimson">STOP</span>
+                <p style="margin: 0; font-size: 0.94rem; color: var(--text-soft);">
+                  Obsessing over artisanal, hand-crafted code &amp; nitpicking variable names in PRs.
+                </p>
+              </div>
+              <div class="vs-divider" aria-hidden="true"><span class="vs-badge">→</span></div>
+              <div class="vs-card post-rapture" style="padding: 0.9rem 1.1rem;">
+                <span class="eyebrow emerald">START</span>
+                <p style="margin: 0; font-size: 0.94rem; color: var(--text-soft);">
+                  Designing rock-solid architectures, invariants, and <strong>adversarial test suites</strong> that prove the code works.
+                </p>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="vs-grid">
+              <div class="vs-card old-religion" style="padding: 0.9rem 1.1rem;">
+                <span class="eyebrow crimson">STOP</span>
+                <p style="margin: 0; font-size: 0.94rem; color: var(--text-soft);">
+                  Spending weeks typing boilerplate QMS documentation from scratch like medieval scribes.
+                </p>
+              </div>
+              <div class="vs-divider" aria-hidden="true"><span class="vs-badge">→</span></div>
+              <div class="vs-card post-rapture" style="padding: 0.9rem 1.1rem;">
+                <span class="eyebrow emerald">START</span>
+                <p style="margin: 0; font-size: 0.94rem; color: var(--text-soft);">
+                  Curating gold-standard context files (<code>AGENTS.md</code>, <code>CLAUDE.md</code>, hazard logs, QMS templates) so AI generates &amp; updates docs for us to audit.
+                </p>
+              </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="vs-grid">
+              <div class="vs-card old-religion" style="padding: 0.9rem 1.1rem;">
+                <span class="eyebrow crimson">STOP</span>
+                <p style="margin: 0; font-size: 0.94rem; color: var(--text-soft);">
+                  Dismissing AI altogether because you saw some embarrassing “AI slop” on LinkedIn.
+                </p>
+              </div>
+              <div class="vs-divider" aria-hidden="true"><span class="vs-badge">→</span></div>
+              <div class="vs-card post-rapture" style="padding: 0.9rem 1.1rem;">
+                <span class="eyebrow emerald">START</span>
+                <p style="margin: 0; font-size: 0.94rem; color: var(--text-soft);">
+                  Realising “slop” is just what happens when you don't give AI a harness.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 8: WHERE HUMANS ACTUALLY WIN
+           =================================================================== -->
+      <section
+        class="slide next"
+        data-slide-index="7"
+        data-title="Where Humans Win"
+        data-notes="To be clear, this isn't a counsel of despair. If we pivot away from being human syntax-checkers, our actual comparative advantage is huge. No foundation model understands why Trust IT blocks port 443 on Tuesdays, or that in an ambulance bay the printed piece of paper IS the clinical safety barrier, not the React state."
+      >
+        <div class="slide-inner align-top">
+          <div class="slide-header">
+            <span class="eyebrow emerald">COMPARATIVE ADVANTAGE // WHY WE AREN'T REDUNDANT YET</span>
+            <h2>Where Humans Actually Win</h2>
+            <p class="subtitle">
+              Our team remains thoroughly irreplaceable — <em>if</em> we pivot from manual typing to clinical reality, messy systems, and safety accountability.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card card-cyan">
+              <div class="card-header">
+                <span class="eyebrow cyan">01 // GLORIOUS FOIBLES</span>
+                <span class="badge badge-cyan">Hospital IT</span>
+              </div>
+              <h3>We Know the Hospital Systems</h3>
+              <p class="muted" style="margin: 0; font-size: 0.92rem; color: var(--text-soft);">
+                PACS quirks, haunted DICOM tags from 1998, cryptic firewall rules, and precisely why Trust IT blocks port 443 on alternate Tuesdays.
+              </p>
+            </article>
+
+            <article class="card card-gold">
+              <div class="card-header">
+                <span class="eyebrow">02 // CLINICAL REALITY</span>
+                <span class="badge badge-gold">Ward Context</span>
+              </div>
+              <h3>We Talk to Clinicians</h3>
+              <p class="muted" style="margin: 0; font-size: 0.92rem; color: var(--text-soft);">
+                Translating messy clinical reality into formal safety constraints — knowing that the <strong>printed sheet at the bedside</strong> is the actual hazard control, not the screen!
+              </p>
+            </article>
+
+            <article class="card card-emerald">
+              <div class="card-header">
+                <span class="eyebrow emerald">03 // ACCOUNTABILITY</span>
+                <span class="badge badge-emerald">DCB0129 / QMS</span>
+              </div>
+              <h3>We Own the Safety Case</h3>
+              <p class="muted" style="margin: 0; font-size: 0.92rem; color: var(--text-soft);">
+                AI is the engine; we are the Chief Test Pilots and Clinical Safety Officers. Anthropic isn't signing our MHRA or DCB0129 clinical safety sign-off.
+              </p>
+            </article>
+          </div>
+
+          <blockquote class="quote-scroll" style="margin-top: 0.35rem;">
+            “In an AI-abundant world, the bottleneck is no longer typing speed — it is knowing which clinical failure modes will wake someone up at 3 a.m.”
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           SLIDE 9: EXHIBIT D — THIS VERY WEBSITE & RAPTURE READINESS AUDIT
+           =================================================================== -->
+      <section
+        class="slide next"
+        data-slide-index="8"
+        data-title="Exhibit D & Readiness Audit"
+        data-notes="Final punchline: we didn't even hand-craft these slides. A swarm of light subagents ingested figures from four repositories, built the interactive street-map simulation, wired up the nnU-Net bug toggle, and shipped the deck to GitHub Pages in minutes. Before we close, let's tick off the Team Rapture Readiness Audit live and see if Dario spares us."
+      >
+        <div class="slide-inner align-top">
+          <div class="slide-header">
+            <span class="eyebrow gold">EXHIBIT D // META-REVEAL &amp; SALVATION AUDIT</span>
+            <h2>This Very Website (And Your Rapture Readiness Audit)</h2>
+            <p class="subtitle">
+              “Finally: this entire presentation — complete with live canvas simulation, asset ingestion from four repositories, interactive bug toggles, and GitHub Pages deployment — was built and published by a swarm of light subagents (<code>flash</code>, <code>flash-lite</code>) in minutes from a single rambling prompt.”
+            </p>
+          </div>
+
+          <div class="grid-asymmetric">
+            <!-- Interactive Rapture Readiness Checklist -->
+            <div class="card card-gold" id="rapture-audit-card">
+              <div class="card-header">
+                <span class="eyebrow">TEAM RAPTURE READINESS AUDIT</span>
+                <span class="badge badge-crimson" id="audit-score-badge">0 / 3 VERIFIED</span>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                <label class="card" style="padding: 0.8rem 1rem; flex-direction: row; align-items: flex-start; gap: 0.85rem; cursor: pointer;">
+                  <input type="checkbox" class="audit-checkbox" data-audit-item="1" style="margin-top: 0.25rem; width: 18px; height: 18px; accent-color: var(--gold);" />
+                  <div>
+                    <strong style="display: block; font-size: 0.94rem; color: var(--text);">1. Stopped hand-reading 40,000-line PRs like a Victorian monk</strong>
+                    <span class="muted" style="font-size: 0.83rem;">Replaced eyeball fatigue with automated adversarial probes against the compiled system.</span>
+                  </div>
+                </label>
+
+                <label class="card" style="padding: 0.8rem 1rem; flex-direction: row; align-items: flex-start; gap: 0.85rem; cursor: pointer;">
+                  <input type="checkbox" class="audit-checkbox" data-audit-item="2" style="margin-top: 0.25rem; width: 18px; height: 18px; accent-color: var(--gold);" />
+                  <div>
+                    <strong style="display: block; font-size: 0.94rem; color: var(--text);">2. Bottled domain context &amp; QMS templates for agents to use</strong>
+                    <span class="muted" style="font-size: 0.83rem;">Curated <code>AGENTS.md</code>, clinical invariants, and hazard logs instead of winging lazy prompts.</span>
+                  </div>
+                </label>
+
+                <label class="card" style="padding: 0.8rem 1rem; flex-direction: row; align-items: flex-start; gap: 0.85rem; cursor: pointer;">
+                  <input type="checkbox" class="audit-checkbox" data-audit-item="3" style="margin-top: 0.25rem; width: 18px; height: 18px; accent-color: var(--gold);" />
+                  <div>
+                    <strong style="display: block; font-size: 0.94rem; color: var(--text);">3. Focused human effort on hospital foibles &amp; bedside safety</strong>
+                    <span class="muted" style="font-size: 0.83rem;">Owning clinical reality, Trust IT chaos, and DCB0129 accountability as Chief Test Pilots.</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Salvation Status Panel -->
+            <div class="card" id="salvation-panel" style="justify-content: space-between;">
+              <div>
+                <span class="eyebrow cyan">SALVATION STATUS</span>
+                <div class="metric-value crimson" id="salvation-percent" style="margin-top: 0.35rem;">0% READY</div>
+                <p id="salvation-verdict" style="margin: 0.65rem 0 0; font-size: 1rem; font-weight: 600; color: var(--text-soft);">
+                  Status: Perilously artisanal. Recommend hiding under a PACS server until harnesses are installed.
+                </p>
+              </div>
+
+              <div class="pill-row" style="margin-top: 0.75rem;">
+                <button type="button" class="btn btn-gold" id="audit-all-btn">Tick All &amp; Seek Absolution</button>
+                <button type="button" class="btn" id="audit-reset-btn">Reset</button>
+              </div>
+
+              <div class="muted mono" style="font-size: 0.75rem; border-top: 1px solid var(--border); padding-top: 0.65rem;">
+                Press <kbd>N</kbd> for presenter notes · Click any chart or screenshot to open lightbox
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <footer class="bottombar" aria-label="Slide controls">
+      <div class="nav-controls">
+        <button type="button" class="btn" id="prev-btn" disabled>← Previous</button>
+        <button type="button" class="btn btn-primary" id="next-btn">Next →</button>
+      </div>
+
+      <div class="kbd-hint" aria-hidden="true">
+        <kbd>←</kbd><kbd>→</kbd> Navigate · <kbd>N</kbd> Notes · <kbd>Esc</kbd> Close
+      </div>
+
+      <div class="nav-controls">
+        <button type="button" class="btn btn-notes" id="notes-toggle" aria-expanded="false" aria-controls="notes-drawer">
+          Speaker Notes (N)
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Speaker Notes Drawer -->
+  <aside class="notes-drawer" id="notes-drawer" aria-hidden="true" aria-label="Speaker notes">
+    <div class="notes-drawer-header">
+      <span id="notes-slide-label">SPEAKER NOTES // SLIDE 01</span>
+      <button type="button" class="btn" id="notes-close" style="padding: 0.18rem 0.55rem; font-size: 0.74rem;">Close</button>
+    </div>
+    <div class="notes-drawer-body" id="notes-body"></div>
+  </aside>
+
+  <!-- Full-Screen Image Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image lightbox">
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">×</button>
+      <img id="lightbox-img" src="" alt="" />
+      <div class="lightbox-caption">
+        <span id="lightbox-caption"></span>
+        <span class="mono muted" style="font-size: 0.75rem;">Press Esc or click backdrop to close</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
